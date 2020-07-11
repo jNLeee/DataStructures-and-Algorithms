@@ -1,0 +1,29 @@
+#pragma once
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <regex>
+#include <utility>
+#include <string>
+#include <stdio.h>
+#include "HashTable.hpp"
+
+using namespace std;
+
+// DO NOT MODIFY BELOW THIS LINE
+class CSVEditor
+{
+private:
+    ifstream input;
+    ifstream roster;
+    ofstream output;
+    regex regexPattern;
+    HashTable<string> *hashTable;
+
+public:
+    CSVEditor(string &inputPath, string &rosterPath, string &outputPath, regex expr, int m); //h(x) = x mod m;
+    ~CSVEditor();
+    void readCSVToTable();
+    void writeCSVToFile();
+    std::tuple<int, int, double> getStats(); //returns the HashTable stats in a tuple <minChainLen, maxChainLen, averageChainLen>
+};

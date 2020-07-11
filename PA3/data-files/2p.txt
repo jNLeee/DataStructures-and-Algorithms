@@ -1,0 +1,7 @@
+Inorder Traversal (Key[SearchCost]): 1[2] 2[1] 3[2] 
+
+Tree level by level:
+
+2[1] 
+1[2] 3[2] 
+
